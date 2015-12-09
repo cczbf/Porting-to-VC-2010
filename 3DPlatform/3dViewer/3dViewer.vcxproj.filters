@@ -1,0 +1,737 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Other Source Files">
+      <UniqueIdentifier>{36788e69-8ec1-4509-af48-014018ebf79a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Other Header Files">
+      <UniqueIdentifier>{8147adc7-3b55-451e-a824-a180302d200e}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{c4a37ffb-6b02-44e6-8567-365f34d2e4fd}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="MFC Frame">
+      <UniqueIdentifier>{cac418bf-4916-44ac-85a5-cb7b44ce5cb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenGL">
+      <UniqueIdentifier>{e1e65987-d69f-4786-91bb-4d6e1d78da6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithms">
+      <UniqueIdentifier>{70724fb0-1e1d-4957-af5b-dd4ab6cf6d94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{298acea5-5afd-4fa6-b6da-5d9ad99e0a45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bmp">
+      <UniqueIdentifier>{133f75c6-e436-49b0-8fa1-49aeb4e3ddbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code">
+      <UniqueIdentifier>{84ffb248-be22-4a67-b235-78d5033d58b3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CArray2DInt.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CArray2DInt1.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CDIBFlood.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CDiffusionVarCo.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CGlobals.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CIntArray.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CIntArray_.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cl.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CL0.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CL0_.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CL_.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CLDIFile.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CLw.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CLw_.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CMyCGLib.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CTransformedImage.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ctriangle.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CTriangle_.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CTriangleArray.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CTriangleArray_.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CVertex.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CVertex_.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CVertexArray.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CVertexArray_.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSubdivideSetting.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LabelPts.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshGlobal.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PolyTri.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="predicates.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SubdivideMesh.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tetgen.cpp">
+      <Filter>Other Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dViewer.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="3dViewerDoc.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="3dViewerView.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CCursorBase.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CCursorPan.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CCursorZoomIn.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CCursorZoomOut.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgTab00.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="cDlgTab01.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgTab02.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgTab03.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgTab04.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgTab05.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgTab06.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CDlgTab07.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="cDlgTestPanel.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CEasyProgressBar.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolDialogBar.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CTestPanelTabs.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CTool3D.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CToolBase.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CToolPan.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CToolZoomIn.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="CToolZoomOut.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="Dlg2DMeshInfoDisp.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgLightDispMode.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgOptiSettings.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicDialog.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="HistoryEdit.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgressBar.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrollDlg.cpp">
+      <Filter>MFC Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="C3D.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="COpenGL.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="COpenGL3D.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="COpenGL3DEx.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackBall.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="BitAdjacentMatrix.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="CFFT.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="CFWT.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="CFWT_FFT_Util.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="CMeshOpti.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="CRelxationLabelling.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="CWaveletFilterBase.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="DigitalGeometry.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="fdajc.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="fmin.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsAlgorithms.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="IniFile.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="lnsrch.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="lubksb.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="ludcmp.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh3D.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshForGeoImg.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="mnewt.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="newt.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="nrutil.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="random.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangles.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="2DMesh.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CMesh.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="GLM.CPP">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="ply.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadOBJ.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadPLY.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh_connectivity.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh_io.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh_normals.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh_stats.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh_tstrips.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CBmpDblBuffering.cpp">
+      <Filter>Bmp</Filter>
+    </ClCompile>
+    <ClCompile Include="cbmpviewerdata.cpp">
+      <Filter>Bmp</Filter>
+    </ClCompile>
+    <ClCompile Include="cdib.cpp">
+      <Filter>Bmp</Filter>
+    </ClCompile>
+    <ClCompile Include="CDIBOrg.cpp">
+      <Filter>Bmp</Filter>
+    </ClCompile>
+    <ClCompile Include="CHtArray2Dib.cpp">
+      <Filter>Bmp</Filter>
+    </ClCompile>
+    <ClCompile Include="CRawImage16.cpp">
+      <Filter>Bmp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CTransformedImage.h">
+      <Filter>Other Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CArray.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CArray2DFLT.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CArray2DInt.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CArray2DInt1.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCursorBase.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCursorPan.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCursorZoomIn.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCursorZoomOut.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCursotZoomIn.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCursotZoomOut.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CDIBFlood.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CDiffusionVarCo.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CGlobals.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CIntArray.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CIntArray_.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cl.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CL0.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CL0_.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CL_.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="classarr.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLDIFile.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLw.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLw_.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CMyCGLib.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CTriangle.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CTriangle_.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CtriangleArray.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CTriangleArray_.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CVertex.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CVertex_.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CVertexArray.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CVertexArray_.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSubdivideSetting.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jitter.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LabelPts.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshGlobal.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NTTYPE.H">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PolyTri.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PolyTriGlobal.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="random.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="STR.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SubdivideMesh.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tetgen.h">
+      <Filter>Other Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dViewer.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="3dViewerDoc.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="3dViewerView.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgTab00.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="cDlgTab01.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgTab02.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgTab03.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgTab04.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgTab05.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgTab06.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="CDlgTab07.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="cDlgTestPanel.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="CEasyProgressBar.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolDialogBar.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="CTestPanelTabs.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="CTool3D.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="CToolBase.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="CToolPan.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="CToolZoomIn.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="CToolZoomOut.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="Dlg2DMeshInfoDisp.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgLightDispMode.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgOptiSettings.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="HistoryEdit.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="MFC 60.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgressBar.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="ScrollDlg.h">
+      <Filter>MFC Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="C3D.h">
+      <Filter>OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="COpenGL.h">
+      <Filter>OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="COpenGL3D.h">
+      <Filter>OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="COpenGL3DEx.h">
+      <Filter>OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="glut.h">
+      <Filter>OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackBall.h">
+      <Filter>OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="BitAdjacentMatrix.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="CFFT.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="CFWT.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="CFWT_FFT_Util.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="CMeshOpti.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="CRelxationLabelling.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="CWaveletFilterBase.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="DigitalGeometry.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsAlgorithms.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="IniFile.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryPool.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh3D.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshForGeoImg.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="nrutil.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangles.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="2DMesh.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="cmesh.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="GLM.H">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="ply.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadOBJ.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="readply.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="typedef.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Vec.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="CBmpDblBuffering.h">
+      <Filter>Bmp</Filter>
+    </ClInclude>
+    <ClInclude Include="cbmpviewerdata.h">
+      <Filter>Bmp</Filter>
+    </ClInclude>
+    <ClInclude Include="cdib.h">
+      <Filter>Bmp</Filter>
+    </ClInclude>
+    <ClInclude Include="CDIBOrg.h">
+      <Filter>Bmp</Filter>
+    </ClInclude>
+    <ClInclude Include="CHtArray2Dib.h">
+      <Filter>Bmp</Filter>
+    </ClInclude>
+    <ClInclude Include="CRawImage16.h">
+      <Filter>Bmp</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="3dViewer.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\3dViewer.ico">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\3dViewer.rc2">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\3dViewerDoc.ico">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="arrow.cur">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\cur00001.cur">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\Cursor1.cur">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\cursor2.cur">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\icon1.ico">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\icon2.ico">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\zoomin.cur">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

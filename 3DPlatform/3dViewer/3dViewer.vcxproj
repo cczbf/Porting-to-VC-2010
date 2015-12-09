@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>"$/Platform/2DImageProcessingOnly/3dViewer", SGIBAAAA</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Release\3dViewer.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <AdditionalOptions> /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\3dViewer.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\3dViewer.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Release\3dViewer.exe</OutputFile>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\3dViewer.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <CallingConvention>StdCall</CallingConvention>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\3dViewer.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\3dViewer.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreSpecificDefaultLibraries>library;MSVCRT.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <OutputFile>.\Debug\3dViewer.exe</OutputFile>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CArray2DInt.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CArray2DInt1.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CDIBFlood.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CDiffusionVarCo.cpp">
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </DebugInformationFormat>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_USE_NON_INTEL_COMPILER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CGlobals.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CIntArray.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CIntArray_.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="cl.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CL0.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CL0_.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CL_.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CLDIFile.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CLw.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CLw_.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CMyCGLib.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CTransformedImage.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ctriangle.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CTriangle_.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CTriangleArray.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CTriangleArray_.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CVertex.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CVertex_.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CVertexArray.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CVertexArray_.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="DlgSubdivideSetting.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="LabelPts.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="MeshGlobal.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="PolyTri.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="predicates.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="SubdivideMesh.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="tetgen.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="3dViewer.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="3dViewerDoc.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="3dViewerView.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CCursorBase.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CCursorPan.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CCursorZoomIn.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CCursorZoomOut.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CDlgTab00.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_USE_NON_INTEL_COMPILER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="cDlgTab01.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CDlgTab02.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CDlgTab03.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CDlgTab04.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CDlgTab05.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CDlgTab06.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CDlgTab07.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="cDlgTestPanel.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CEasyProgressBar.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CoolDialogBar.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CTestPanelTabs.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CTool3D.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CToolBase.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CToolPan.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CToolZoomIn.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CToolZoomOut.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Dlg2DMeshInfoDisp.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="DlgLightDispMode.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="DlgOptiSettings.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="GraphicDialog.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="HistoryEdit.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ProgressBar.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ScrollDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="C3D.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="COpenGL.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="COpenGL3D.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="COpenGL3DEx.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="TrackBall.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="BitAdjacentMatrix.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CFFT.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CFWT.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CFWT_FFT_Util.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CMeshOpti.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CRelxationLabelling.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CWaveletFilterBase.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="DigitalGeometry.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="fdajc.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="fmin.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="GraphicsAlgorithms.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="IniFile.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="lnsrch.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="lubksb.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ludcmp.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Mesh3D.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="MeshForGeoImg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="mnewt.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="newt.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="nrutil.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="random.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Triangles.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="2DMesh.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CMesh.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="GLM.CPP">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ply.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ReadOBJ.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ReadPLY.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="TriMesh_connectivity.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="TriMesh_io.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="TriMesh_normals.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="TriMesh_stats.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="TriMesh_tstrips.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CBmpDblBuffering.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="cbmpviewerdata.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="cdib.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CDIBOrg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CHtArray2Dib.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CRawImage16.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /arch:SSE2 /GA /O3 /Qparallel   /arch:SSE2 /GA /O3 /Qparallel </AdditionalOptions>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CTransformedImage.h" />
+    <ClInclude Include="CArray.h" />
+    <ClInclude Include="CArray2DFLT.h" />
+    <ClInclude Include="CArray2DInt.h" />
+    <ClInclude Include="CArray2DInt1.h" />
+    <ClInclude Include="CCursorBase.h" />
+    <ClInclude Include="CCursorPan.h" />
+    <ClInclude Include="CCursorZoomIn.h" />
+    <ClInclude Include="CCursorZoomOut.h" />
+    <ClInclude Include="CCursotZoomIn.h" />
+    <ClInclude Include="CCursotZoomOut.h" />
+    <ClInclude Include="CDIBFlood.h" />
+    <ClInclude Include="CDiffusionVarCo.h" />
+    <ClInclude Include="CGlobals.h" />
+    <ClInclude Include="CIntArray.h" />
+    <ClInclude Include="CIntArray_.h" />
+    <ClInclude Include="cl.h" />
+    <ClInclude Include="CL0.h" />
+    <ClInclude Include="CL0_.h" />
+    <ClInclude Include="CL_.h" />
+    <ClInclude Include="classarr.h" />
+    <ClInclude Include="CLDIFile.h" />
+    <ClInclude Include="CLw.h" />
+    <ClInclude Include="CLw_.h" />
+    <ClInclude Include="CMyCGLib.h" />
+    <ClInclude Include="CTriangle.h" />
+    <ClInclude Include="CTriangle_.h" />
+    <ClInclude Include="CtriangleArray.h" />
+    <ClInclude Include="CTriangleArray_.h" />
+    <ClInclude Include="CVertex.h" />
+    <ClInclude Include="CVertex_.h" />
+    <ClInclude Include="CVertexArray.h" />
+    <ClInclude Include="CVertexArray_.h" />
+    <ClInclude Include="DlgSubdivideSetting.h" />
+    <ClInclude Include="jitter.h" />
+    <ClInclude Include="LabelPts.h" />
+    <ClInclude Include="MeshGlobal.h" />
+    <ClInclude Include="NTTYPE.H" />
+    <ClInclude Include="PolyTri.h" />
+    <ClInclude Include="PolyTriGlobal.h" />
+    <ClInclude Include="random.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="STR.h" />
+    <ClInclude Include="SubdivideMesh.h" />
+    <ClInclude Include="tetgen.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="3dViewer.h" />
+    <ClInclude Include="3dViewerDoc.h" />
+    <ClInclude Include="3dViewerView.h" />
+    <ClInclude Include="CDlgTab00.h" />
+    <ClInclude Include="cDlgTab01.h" />
+    <ClInclude Include="CDlgTab02.h" />
+    <ClInclude Include="CDlgTab03.h" />
+    <ClInclude Include="CDlgTab04.h" />
+    <ClInclude Include="CDlgTab05.h" />
+    <ClInclude Include="CDlgTab06.h" />
+    <ClInclude Include="CDlgTab07.h" />
+    <ClInclude Include="cDlgTestPanel.h" />
+    <ClInclude Include="CEasyProgressBar.h" />
+    <ClInclude Include="CoolDialogBar.h" />
+    <ClInclude Include="CTestPanelTabs.h" />
+    <ClInclude Include="CTool3D.h" />
+    <ClInclude Include="CToolBase.h" />
+    <ClInclude Include="CToolPan.h" />
+    <ClInclude Include="CToolZoomIn.h" />
+    <ClInclude Include="CToolZoomOut.h" />
+    <ClInclude Include="Dlg2DMeshInfoDisp.h" />
+    <ClInclude Include="DlgLightDispMode.h" />
+    <ClInclude Include="DlgOptiSettings.h" />
+    <ClInclude Include="HistoryEdit.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MFC 60.h" />
+    <ClInclude Include="ProgressBar.h" />
+    <ClInclude Include="ScrollDlg.h" />
+    <ClInclude Include="C3D.h" />
+    <ClInclude Include="COpenGL.h" />
+    <ClInclude Include="COpenGL3D.h" />
+    <ClInclude Include="COpenGL3DEx.h" />
+    <ClInclude Include="glut.h" />
+    <ClInclude Include="TrackBall.h" />
+    <ClInclude Include="BitAdjacentMatrix.h" />
+    <ClInclude Include="CFFT.h" />
+    <ClInclude Include="CFWT.h" />
+    <ClInclude Include="CFWT_FFT_Util.h" />
+    <ClInclude Include="CMeshOpti.h" />
+    <ClInclude Include="CRelxationLabelling.h" />
+    <ClInclude Include="CWaveletFilterBase.h" />
+    <ClInclude Include="DigitalGeometry.h" />
+    <ClInclude Include="GraphicsAlgorithms.h" />
+    <ClInclude Include="IniFile.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MemoryPool.h" />
+    <ClInclude Include="Mesh3D.h" />
+    <ClInclude Include="MeshForGeoImg.h" />
+    <ClInclude Include="nrutil.h" />
+    <ClInclude Include="Triangles.h" />
+    <ClInclude Include="2DMesh.h" />
+    <ClInclude Include="cmesh.h" />
+    <ClInclude Include="GLM.H" />
+    <ClInclude Include="ply.h" />
+    <ClInclude Include="ReadOBJ.h" />
+    <ClInclude Include="readply.h" />
+    <ClInclude Include="TriMesh.h" />
+    <ClInclude Include="typedef.h" />
+    <ClInclude Include="Vec.h" />
+    <ClInclude Include="CBmpDblBuffering.h" />
+    <ClInclude Include="cbmpviewerdata.h" />
+    <ClInclude Include="cdib.h" />
+    <ClInclude Include="CDIBOrg.h" />
+    <ClInclude Include="CHtArray2Dib.h" />
+    <ClInclude Include="CRawImage16.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\3dViewer.ico" />
+    <CustomBuild Include="res\3dViewer.rc2">
+      <FileType>RC</FileType>
+    </CustomBuild>
+    <CustomBuild Include="res\3dViewerDoc.ico" />
+    <CustomBuild Include="arrow.cur" />
+    <CustomBuild Include="res\cur00001.cur" />
+    <CustomBuild Include="res\Cursor1.cur" />
+    <CustomBuild Include="res\cursor2.cur" />
+    <CustomBuild Include="res\icon1.ico" />
+    <CustomBuild Include="res\icon2.ico" />
+    <CustomBuild Include="res\Toolbar.bmp" />
+    <CustomBuild Include="res\zoomin.cur" />
+    <CustomBuild Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="3dViewer.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
