@@ -258,7 +258,7 @@ void CSubdivideMesh::SubdivideTriangle(	double xa, double ya,
 	cgLib.normalize(dAC, 2);
 	double Lab = sqrt( (xa-xc)*(xa-xc) + (ya-yc)*(ya-yc) );
 	nSubNum = Lab/dMinLen - 0.5;
-	for(i=1; i<=nSubNum; i++)
+	for(int i=1; i<=nSubNum; i++)
 	{	
 		if(vA < vC)
 		{
@@ -295,7 +295,7 @@ void CSubdivideMesh::SubdivideTriangle(	double xa, double ya,
 	double Lbc = sqrt( (xb-xc)*(xb-xc) + (yb-yc)*(yb-yc) );
 	nSubNum = Lbc/dMinLen - 0.5;
 
-    for(i=1; i<=nSubNum; i++)
+    for(int i=1; i<=nSubNum; i++)
 	{
 		if(vB < vC)
 		{
@@ -419,7 +419,7 @@ void CSubdivideMesh::SubdivideTriangle(	double xa, double ya,
 
 	CTINClass tin(" pczAenVQ ");
 	tin.BeginAddPoints();
-    for(i=0; i<xColl.size(); i++)
+    for(int i=0; i<xColl.size(); i++)
 	{		
 		tin.AddPoint(xColl[i], yColl[i], indexColl[i]);
 	}
@@ -431,7 +431,7 @@ void CSubdivideMesh::SubdivideTriangle(	double xa, double ya,
 	long nTriangleNum = 0 ;
 	TRIANGLE **tris = tin.SelectTriangles(&nTriangleNum, 0, 0, 0, 0 );
 		
-	for (i=0; i<nTriangleNum; i++)
+	for (int i=0; i<nTriangleNum; i++)
 	{	
 		double v1[3];
 		double v2[3];
@@ -537,7 +537,7 @@ CMesh* CSubdivideMesh::OutputSubMesh(double dfLen)
 			double *x = new double[m_subPtColl.size()];
 			double *y = new double[m_subPtColl.size()];
 			double *z = new double[m_subPtColl.size()];       
-			for(i=0; i<m_subPtColl.size(); i++)
+			for(int i=0; i<m_subPtColl.size(); i++)
 			{
 				x[i] = m_subPtColl[i].x[0];
 				y[i] = m_subPtColl[i].x[1];
@@ -547,7 +547,7 @@ CMesh* CSubdivideMesh::OutputSubMesh(double dfLen)
 			int *nV1 = new int[m_subTriangleColl.size()];
 			int *nV2 = new int[m_subTriangleColl.size()];
 			int *nV3 = new int[m_subTriangleColl.size()];
-			for(i=0; i<m_subTriangleColl.size(); i++)
+			for(int i=0; i<m_subTriangleColl.size(); i++)
 			{
 				nV1[i] = m_subTriangleColl[i].va;
 				nV2[i] = m_subTriangleColl[i].vb;

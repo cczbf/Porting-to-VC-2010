@@ -88,16 +88,16 @@ CMesh::CMesh(const CMesh &mesh)
 	 m_CVertexArray.SetSize(nVertex);
 	 for(int i=0; i<nVertex; i++)
 	 {
-		 m_CVertexArray[i].dX = mesh.m_CVertexArray[i]->dX;
-		 m_CVertexArray[i].dY = mesh.m_CVertexArray[i]->dY;
-		 m_CVertexArray[i].dZ = mesh.m_CVertexArray[i]->dZ;
+		 m_CVertexArray[i].dX = mesh.m_CVertexArray[i].dX;
+		 m_CVertexArray[i].dY = mesh.m_CVertexArray[i].dY;
+		 m_CVertexArray[i].dZ = mesh.m_CVertexArray[i].dZ;
 
 		 m_CVertexArray[i].index = mesh.m_CVertexArray[i].index;
 	 }
 
 	 int nNormal = mesh.m_NormalArray.GetSize();
      m_NormalArray.SetSize(nNormal);
-	 for(i=0; i<nNormal; i++)
+	 for(int i=0; i<nNormal; i++)
 	 {
 		 m_NormalArray[i].dX = mesh.m_NormalArray[i].dX;
 		 m_NormalArray[i].dY = mesh.m_NormalArray[i].dY;
@@ -227,7 +227,7 @@ BOOL CMesh::Write (CString strFile)
 		fprintf(pFPly, "%f %f %f\n", this->m_CVertexArray[i].dX, this->m_CVertexArray[i].dY, this->m_CVertexArray[i].dZ );
 	}
 	
-	for( i = 0; i < nNumOfTriangles; i++)
+	for(int i = 0; i < nNumOfTriangles; i++)
 	{
 		fprintf(pFPly, "3 %d %d %d\n", 
 			this->m_CTriangleArray[i].pnV[0],
@@ -235,7 +235,7 @@ BOOL CMesh::Write (CString strFile)
 			this->m_CTriangleArray[i].pnV[2] );
 	}
 
-    for( i = 0; i < nNumOfTriangles; i++)
+    for(int i = 0; i < nNumOfTriangles; i++)
 	{
 		fprintf(pFPly, "%d %d %d\n", 
 			(int)this->m_CTriangleArray[i].dColorR,
@@ -974,7 +974,7 @@ bool CMesh::Load(CString file)
 			m_CTriangleArray.SetSize(nFace);
 			m_nNumOfTriangles = nFace;
 		
-			for( i=0; i<nFace; i++)
+			for(int i=0; i<nFace; i++)
 			{
 				int a, b, c;
 				mesh->GetFaceIndex(a, b, c, i);
@@ -985,7 +985,7 @@ bool CMesh::Load(CString file)
 			}
 		
 			m_NormalArray.SetSize(nNormal);
-			for(i=0; i<nNormal; i++)
+			for(int i=0; i<nNormal; i++)
 			{
 				float nx,ny,nz;
 				mesh->GetNormal(nx, ny, nz, i);
@@ -1081,7 +1081,7 @@ void CMesh::ExtractEdges()
 		m_pEdgeNodes[i].pNext = NULL;
 	}
 
-	for(i=0; i<nTriangleNum; i++)
+	for(int i=0; i<nTriangleNum; i++)
 	{
 		int a,b,c;
 		a = m_CTriangleArray[i].pnV[0];
@@ -1134,7 +1134,7 @@ void CMesh::ExtractEdges()
 
 	//summarize the number of edge of each node
      int nEdgeSum = 0;
-	 for( i=0; i<nVertexNum; i++)
+	 for(int i=0; i<nVertexNum; i++)
 	 {
 		 EdgeNode *pHead = m_pEdgeNodes[i].pNext;
 		 int nSum = 0;

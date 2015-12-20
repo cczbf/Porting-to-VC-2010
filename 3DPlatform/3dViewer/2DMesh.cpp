@@ -234,7 +234,7 @@ bool C2DMesh::Load(CString file)
 		//m_CVertexArray.SetSize(n2DPtsNum );
 		//m_nNumOfVertexs = n2DPtsNum ;  //the number of triangle vertex		
 						
-		for ( i=0; i<n2DPtsNum; i++)
+		for (int i=0; i<n2DPtsNum; i++)
 		{
 			fscanf(fp, "%f %f %d", &x, &y, &index);
 			
@@ -255,7 +255,7 @@ bool C2DMesh::Load(CString file)
 		
 		//m_pCRelxationLabelling->SetTriangleNum(nTriangleNum);
 		
-		for (i=0; i<nTriangleNum; i++)
+		for (int i=0; i<nTriangleNum; i++)
 		{
 			fscanf(fp, "%d %d %d", &va, &vb, &vc);
 
@@ -691,7 +691,7 @@ void   C2DMesh::ComputeTriangleArea()
 
 	//int nVertexSize = m_pCRelxationLabelling->m_n3DNode_length;
 
-	for ( i=0; i<m_n3DPtNum; i++)
+	for (int i=0; i<m_n3DPtNum; i++)
 	{
 		//CNode3D p = m_pCRelxationLabelling->Get3DPoint(i);
 		float px,py,pz;
@@ -1577,7 +1577,7 @@ BOOL  C2DMesh::Write(CString strFile)
 	int nVertexNum = GetVertexNum();
 	fprintf(fp, "%d %d", nBorderPtNum, nVertexNum-nBorderPtNum);
 
-	for(i=0; i<nVertexNum; i++)
+	for(int i=0; i<nVertexNum; i++)
 	{
 		float x,y,z;
 		
@@ -1587,7 +1587,7 @@ BOOL  C2DMesh::Write(CString strFile)
 	
 	//save the triangle point list
 	int nTriangleNum = GetTriangleNum();
-	for(i=0; i<nTriangleNum; i++)
+	for(int i=0; i<nTriangleNum; i++)
 	{
 		int va,vb,vc;
 		GetTriangleIndices(va, vb, vc, i);

@@ -262,7 +262,7 @@ BOOL CMeshOpti::Write2Ply (CString strFile)
 	{
 		fprintf(pFPly, "%f %f %f\n", this->m_CVertexArray[i].dX, this->m_CVertexArray[i].dY, this->m_CVertexArray[i].dZ );
 	}
-	for( i = 0; i < this->m_nNumOfTriangles; i++)
+	for(int i = 0; i < this->m_nNumOfTriangles; i++)
 	{
 		fprintf(pFPly, "3 %d %d %d\n", 
 			this->m_CTriangleArray[i].pnV[0],
@@ -270,7 +270,7 @@ BOOL CMeshOpti::Write2Ply (CString strFile)
 			this->m_CTriangleArray[i].pnV[2] );
 	}
 
-for( i = 0; i < this->m_nNumOfTriangles; i++)
+for(int i = 0; i < this->m_nNumOfTriangles; i++)
 	{
 		fprintf(pFPly, "%d %d %d\n", 
 			(int)this->m_CTriangleArray[i].dColorR,
@@ -404,7 +404,8 @@ void CMeshOpti::Purify ()
 	//Find first:
 	for (int i = 0; i < this->m_nNumOfVertexs;i++)
 	{
-		for ( int j = 0; j < nNumOfVtxNew;j++)
+		int j;
+		for (j = 0; j < nNumOfVtxNew;j++)
 			if( this->m_CVertexArray[i] == CCleanVertexes[j] )
 			{
 			
@@ -418,11 +419,11 @@ void CMeshOpti::Purify ()
 		CVtxMap[i] = j;
 	}
 
-	for ( i = 0; i < nNumOfVtxNew; i++)
+	for (int i = 0; i < nNumOfVtxNew; i++)
 		this->m_CVertexArray[i] = CCleanVertexes[i];
 	this->m_nNumOfVertexs = nNumOfVtxNew;
 
-	for ( i = 0; i < this->m_nNumOfTriangles; i++ )
+	for (int i = 0; i < this->m_nNumOfTriangles; i++ )
 	{
 		for ( int j = 0; j < 3;j++)
 		{
@@ -728,7 +729,7 @@ void CMeshOpti::SetDataFromMesh(const CMesh& mesh)
 	m_CTriangleArray.SetSize(mesh.GetTriangleNum());
     m_nNumOfTriangles = mesh.GetTriangleNum();
 
-	for(i=0; i<mesh.GetTriangleNum(); i++)
+	for(int i=0; i<mesh.GetTriangleNum(); i++)
 	{
 		int va,vb,vc;
 		mesh.GetTriangleIndices(va, vb, vc, i);

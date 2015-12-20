@@ -157,7 +157,7 @@ void CDIBFlood::BoundryFill4 (HANDLE hDIB, int nSeedX, int nSeedY, int nRNew, in
 	}
 	TRACE (" polyline(p,%d);\r\n}\r\n", this->m_lParamLength * 2);
  
-	for ( i = 0; i < this->m_lParamLength ; i++)
+	for (int i = 0; i < this->m_lParamLength ; i++)
 		TRACE ( "%4d\t %1.22e\t%f\t%f\t \r\n", 
 				i, 
 				this->m_pParam[i].dblKey,

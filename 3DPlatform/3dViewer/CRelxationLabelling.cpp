@@ -794,7 +794,7 @@ void CRelxationLabelling::ComputeStatisticOfRatio ()
 	lfMean = (lfSum)/(double)m_nEdgeList_length;
 	
 	lfSum = 0;
-	for(i=0; i < m_nEdgeList_length; i++)
+	for(int i=0; i < m_nEdgeList_length; i++)
 	{ 
 		lfSum += (m_pEdgeList[i].dStretchMatrics - lfMean)*
 			     (m_pEdgeList[i].dStretchMatrics - lfMean);
@@ -896,7 +896,7 @@ void CRelxationLabelling::Load2DMesh (CString fileName)
 		fscanf(fp, "%d", &n2DPtsNum);
 		m_n2DNode_length = n2DPtsNum;
 		m_pCNode2D = new CNode2D[n2DPtsNum];
-		for (i=0; i<n2DPtsNum; i++)
+		for (int i=0; i<n2DPtsNum; i++)
 		{
 			fscanf(fp, "%f %f %d", &x, &y, &index);
 			m_pCNode2D[i].u = x;
@@ -905,7 +905,7 @@ void CRelxationLabelling::Load2DMesh (CString fileName)
 		}
 		//read the triangle index
 		fscanf(fp, "%d", &nTriangleNum);
-		for (i=0; i<nTriangleNum; i++)
+		for (int i=0; i<nTriangleNum; i++)
 		{
 			fscanf(fp, "%d %d %d", &va, &vb, &vc);
 		}		
@@ -1050,7 +1050,7 @@ void CRelxationLabelling::SetLabelList1 (int w, int h, double dDensity)
 				GlobalFree (hDib1);
 				
 				lpRaw = (LPBYTE)GlobalLock(hRaw);
-				for ( i = 0; i < w; i ++)
+				for (int i = 0; i < w; i ++)
 					lpRaw[i] = lpRaw[w*h-1 - i] = 0;
 				lpRaw[w/2] = lpRaw[w*h-w/2] = 255;
 				GlobalUnlock(hRaw);
@@ -1140,7 +1140,7 @@ void CRelxationLabelling::Initial_P ()
 
 				ASSERT( dPSum != 0.0 );
 
-				for ( li = 0; li < m; li++)
+				for (int li = 0; li < m; li++)
 				{
 					dp0 = this->m_pCProbability[ai][li] / dPSum;
 					ASSERT( dp0>=0.0 && dp0<=1.0 );
@@ -1244,7 +1244,7 @@ int CRelxationLabelling::SetNode2DLabelings ()
 		
 	if(m_nModeType == 1)
 	{		
-		for ( ai = 0; ai < n; ai++)
+		for (int ai = 0; ai < n; ai++)
 		{
 			this->SetNode2DLabelBox(ai);
 		}
@@ -1253,7 +1253,7 @@ int CRelxationLabelling::SetNode2DLabelings ()
 	//{{Added by xdh,04,12,29. Refresh 2D Mesh 
 	else
 	{		
-		for ( ai = 0; ai < n; ai++)
+		for (int ai = 0; ai < n; ai++)
 		{
 			this->SetNode2DLabelBox1(ai);
 		}		
@@ -1330,7 +1330,7 @@ void CRelxationLabelling::SetMesh0 ()
 	double *y = new double[m_n2DNode_length ];//+ nLableNum];
 	double *z = new double[m_n2DNode_length ];//+ nLableNum];
 
-	for (i=0; i<m_n2DNode_length; i++)
+	for (int i=0; i<m_n2DNode_length; i++)
 	{
 		x[i] = (m_pCNode2D[i].u );
 		y[i] = (m_pCNode2D[i].v );
@@ -1346,7 +1346,7 @@ void CRelxationLabelling::SetMesh0 ()
 	double *ratio23 = new double[m_nTriangleNum ];//+ nLableNum];
 	double *ratio31 = new double[m_nTriangleNum ];//+ nLableNum];
 
-	for ( i=0; i<m_nTriangleNum; i++ )
+	for (int i=0; i<m_nTriangleNum; i++ )
 	{		
 		int ia;
 		int ib;
@@ -1443,7 +1443,7 @@ void CRelxationLabelling::SetMesh0 ()
 	int *nv1 = new int[m_nTriangleNum ];//+ nLableNum];
 	int *nv2 = new int[m_nTriangleNum ];//+ nLableNum];
 	int *nv3 = new int[m_nTriangleNum ];//+ nLableNum];
-	for (i=0; i<m_nTriangleNum; i++)
+	for (int i=0; i<m_nTriangleNum; i++)
 	{
 		nv1[i] = m_pCTriangle[i].A;
 		nv2[i] = m_pCTriangle[i].B;
@@ -1576,7 +1576,7 @@ void CRelxationLabelling::SetMesh1 ()
     double *x = new double[m_n2DNode_length];// + nLableNum];
 	double *y = new double[m_n2DNode_length];// + nLableNum];
 	double *z = new double[m_n2DNode_length];// + nLableNum];
-	for ( i=0; i<m_n2DNode_length; i++)
+	for (int i=0; i<m_n2DNode_length; i++)
 	{		
 		double u = m_pCNode2D[i].u * 2 * PI;
 		double v = m_pCNode2D[i].v * PI;
@@ -1610,7 +1610,7 @@ void CRelxationLabelling::SetMesh1 ()
 	double *ratio23 = new double[m_nTriangleNum ];//+ nLableNum];
 	double *ratio31 = new double[m_nTriangleNum ];//+ nLableNum];
 
-	for ( i=0; i<m_nTriangleNum; i++ )
+	for (int i=0; i<m_nTriangleNum; i++ )
 	{		
 		int ia;
 		int ib;
@@ -1696,7 +1696,7 @@ void CRelxationLabelling::SetMesh1 ()
 	int *nv2 = new int[m_nTriangleNum ]; //+ nLableNum];
 	int *nv3 = new int[m_nTriangleNum ]; //+ nLableNum];
 
-	for (i=0; i<m_nTriangleNum; i++)
+	for (int i=0; i<m_nTriangleNum; i++)
 	{
 		nv1[i] = m_pCTriangle[i].A;
 		nv2[i] = m_pCTriangle[i].B;
@@ -2116,7 +2116,7 @@ void CRelxationLabelling::InitNode2D4Sphere ()
 		this->m_pCNode2D[i].z  = this->m_pCLabelList[l].z;
 	}
 
-	for (i = 0; i <n; i++ )
+	for (int i = 0; i <n; i++ )
 		this->SetNode2DLabelBox(i);
 	
   //## end CRelxationLabelling::InitNode2D4Sphere%4199C7F802F4.body
@@ -2531,7 +2531,7 @@ void  CRelxationLabelling::Compute3DStatisticOfRation()
 	lfMean = (lfSum) / (double)m_nEdgeList_length;
 	
 	lfSum = 0;
-	for(i=0; i < m_nEdgeList_length; i++)
+	for(int i=0; i < m_nEdgeList_length; i++)
 	{ 
 		lfSum += (m_pEdgeList[i].dStretchMatrics - lfMean)*
 			     (m_pEdgeList[i].dStretchMatrics - lfMean);
@@ -2747,7 +2747,7 @@ void CRelxationLabelling::SetDataFromMesh(CMesh &mesh)
 		int n3DPtsNum = ((C2DMesh*)(&mesh))->Get3DPointNum();
 		Set3DPointNum(n3DPtsNum);
 
-		for ( i = 0 ; i < n3DPtsNum; i++)
+		for (int i = 0 ; i < n3DPtsNum; i++)
 		{
 			float x,y,z;
 			((C2DMesh*)(&mesh))->Get3DPoint(x, y, z, i);
@@ -2877,7 +2877,7 @@ void  CRelxationLabelling::SetDataFromOpti( CMeshOpti &optimesh)
    int nTriangleNum = optimesh.GetTriangleNum();
    SetTriangleNum(nTriangleNum);
    SetAdjacentMatrixDim(nVertexNum, nVertexNum);
-   for(i=0; i<nTriangleNum; i++)
+   for(int i=0; i<nTriangleNum; i++)
    {
 	   CTriangle_ t = optimesh.GetTriangle(i);
 	   SetTriangleVertexIndex(t.pnV[0], t.pnV[1], t.pnV[2], i);
@@ -2912,7 +2912,7 @@ void  CRelxationLabelling::Save2DMesh(CString filename)
 
 		fprintf(fp, "%d %d \n", nBorderPtNum, nVertexNum-nBorderPtNum);
 		
-		for(i=0; i<nVertexNum; i++)
+		for(int i=0; i<nVertexNum; i++)
 		{
 			float x,y,z = 0;
 
@@ -2927,7 +2927,7 @@ void  CRelxationLabelling::Save2DMesh(CString filename)
 		//save the triangle point list
 		int nTriangleNum = m_nTriangleNum;
 		fprintf(fp, "%d \n", nTriangleNum);
-		for(i=0; i<nTriangleNum; i++)
+		for(int i=0; i<nTriangleNum; i++)
 		{
 			int va,vb,vc;
 			va = m_pCTriangle[i].A;

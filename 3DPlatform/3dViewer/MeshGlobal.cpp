@@ -108,16 +108,16 @@ CMesh* ExtrudeMesh(const double *x, const double *y,
 		double *z[2];
 		z[0] = new double[nPtNum];
 		z[1] = new double[nPtNum];
-		for( i=0; i<nPtNum; i++)
+		for(int i=0; i<nPtNum; i++)
 			z[0][i] = 0;
-		for(i=0; i<nPtNum; i++)
+		for(int i=0; i<nPtNum; i++)
 			z[1][i] = dfHeight;
         		
 		double *tx = new double [nPtNum*2];//+ 2];
 		double *ty = new double [nPtNum*2];// + 2];
 		double *tz = new double [nPtNum*2];// + 2];
          
-		for(i=0; i<2; i++)
+		for(int i=0; i<2; i++)
 		{
 			for(int j=0; j<nPtNum; j++)
 			{
@@ -131,7 +131,7 @@ CMesh* ExtrudeMesh(const double *x, const double *y,
 		int *va = new int[triangleColl.size()];
 		int *vb = new int[triangleColl.size()];
 		int *vc = new int[triangleColl.size()];
-		for(i=0; i<triangleColl.size(); i++ )
+		for(int i=0; i<triangleColl.size(); i++ )
 		{
 			va[i] = triangleColl[i].va;
 			vb[i] = triangleColl[i].vb;
@@ -195,7 +195,7 @@ CMesh* ExtrudeMesh1(const int nContour, const int *pContNum,
 			
 			CMesh *pMesh = ExtrudeMesh(tx, ty, pContNum[i], dfHeight);
 			//add the triangle    
-			for(j=0; j<pMesh->GetTriangleNum(); j++)
+			for(int j=0; j<pMesh->GetTriangleNum(); j++)
 			{
 				TriangleIndex tri;
 				pMesh->GetTriangleIndices(tri.vc, tri.vb, tri.va, j);
@@ -205,7 +205,7 @@ CMesh* ExtrudeMesh1(const int nContour, const int *pContNum,
 				triColl.push_back(tri);
 			}
 			//add the point
-			for(j=0; j<pMesh->GetVertexNum(); j++)
+			for(int j=0; j<pMesh->GetVertexNum(); j++)
 			{
 				float fx,fy,fz;
 				pMesh->GetVertex(fx, fy, fz, j);
@@ -232,14 +232,14 @@ CMesh* ExtrudeMesh1(const int nContour, const int *pContNum,
          
 		//because the index in Polygon Triangulation is starting  from 1
 		//so substract 1
-		for(i=0; i<nTriangle; i++)
+		for(int i=0; i<nTriangle; i++)
 		{
 			v1[i] = v1[i] - 1;
 			v2[i] = v2[i] - 1;
 			v3[i] = v3[i] - 1;
 		}
 
-		for(i=0; i<nTriangle; i++)
+		for(int i=0; i<nTriangle; i++)
 		{
 			TriangleIndex tri;	
 			tri.vc = (v1[i]); // + xColl.size());
@@ -258,7 +258,7 @@ CMesh* ExtrudeMesh1(const int nContour, const int *pContNum,
 			zColl.push_back(0);
 		} */ 
 		//top
-		for(i=0; i<nTriangle; i++)
+		for(int i=0; i<nTriangle; i++)
 		{
 			TriangleIndex tri;	
 			tri.va = v1[i] + xColl.size()/2;
@@ -287,7 +287,7 @@ CMesh* ExtrudeMesh1(const int nContour, const int *pContNum,
 		dx = new double[xColl.size()];
 		dy = new double[yColl.size()];
 		dz = new double[zColl.size()];
-		for(i=0; i<xColl.size();i++)
+		for(int i=0; i<xColl.size();i++)
 		{
 			dx[i] = xColl[i];
 			dy[i] = yColl[i];
@@ -296,7 +296,7 @@ CMesh* ExtrudeMesh1(const int nContour, const int *pContNum,
 		int *va = new int[triColl.size()];
 		int *vb = new int[triColl.size()];
 		int *vc = new int[triColl.size()];
-		for(i=0; i<triColl.size(); i++)
+		for(int i=0; i<triColl.size(); i++)
 		{
 			va[i] = triColl[i].va;
 			vb[i] = triColl[i].vb;
@@ -402,7 +402,7 @@ CMesh* RotateMesh(const double *z, const double *x, const int nPtNum, const int 
 			double *tx = new double[nVertexSize];
 			double *ty = new double[nVertexSize];
 			double *tz = new double[nVertexSize];			
-			for(i=0; i<nVertexSize; i++)
+			for(int i=0; i<nVertexSize; i++)
 			{
 				double u,v,r;
 				u = sptColl[i].u * 2 * PI;
@@ -437,7 +437,7 @@ CMesh* RotateMesh(const double *z, const double *x, const int nPtNum, const int 
 			int *nV2 = new int[nTriangleNum];
 			int *nV3 = new int[nTriangleNum];		
 			int nRealNum = 0;		
-			for (i=0; i<nTriangleNum; i++)
+			for (int i=0; i<nTriangleNum; i++)
 			{	
 				double vx1,vy1;
 				double vx2,vy2;
@@ -539,7 +539,7 @@ CMesh* RotateMesh1(const double *z, const double *x, const int nPtNum, const int
 		//the bottom
 		if(z[0] < z[nPtNum-1])
         {			
-			for(i=0; i<nSlices; i++)
+			for(int i=0; i<nSlices; i++)
 			{
 				triangle.vc = nPtNum*nSlices;
 				triangle.vb = i ;
@@ -548,7 +548,7 @@ CMesh* RotateMesh1(const double *z, const double *x, const int nPtNum, const int
 				triangleColl.push_back(triangle);
 			}
 			//the top
-			for(i=0; i<nSlices; i++)
+			for(int i=0; i<nSlices; i++)
 			{
 				triangle.va = (nPtNum*nSlices) + 1;
 				triangle.vb = (nPtNum-1)*nSlices + i;
@@ -558,7 +558,7 @@ CMesh* RotateMesh1(const double *z, const double *x, const int nPtNum, const int
 		}
 		else
 		{						
-			for(i=0; i<nSlices; i++)
+			for(int i=0; i<nSlices; i++)
 			{
 				triangle.va = nPtNum*nSlices;
 				triangle.vb = i ;
@@ -567,7 +567,7 @@ CMesh* RotateMesh1(const double *z, const double *x, const int nPtNum, const int
 				triangleColl.push_back(triangle);
 			}
 			//the top
-			for(i=0; i<nSlices; i++)
+			for(int i=0; i<nSlices; i++)
 			{
 				triangle.vc = (nPtNum*nSlices) + 1;
 				triangle.vb = (nPtNum-1)*nSlices + i;
@@ -580,7 +580,7 @@ CMesh* RotateMesh1(const double *z, const double *x, const int nPtNum, const int
 		int *va = new int[triangleColl.size()];
 		int *vb = new int[triangleColl.size()];
 		int *vc = new int[triangleColl.size()];
-		for(i=0; i<triangleColl.size(); i++)
+		for(int i=0; i<triangleColl.size(); i++)
 		{
 			va[i]= triangleColl[i].va;
 			vb[i]= triangleColl[i].vb;
@@ -592,7 +592,7 @@ CMesh* RotateMesh1(const double *z, const double *x, const int nPtNum, const int
 		double *ty = new double[nPtNum*nSlices + 2];
 		double *tz = new double[nPtNum*nSlices + 2];
 		float fStep = 360.0/nSlices;
-		for(i=0; i<nPtNum; i++)
+		for(int i=0; i<nPtNum; i++)
 		{
 			for(int j=0; j<nSlices; j++)
 			{			
@@ -671,6 +671,7 @@ void   OrderVertex(const int nContour, const int *pContNum, double *x, double *y
 
 		for(int j=0; j<nPtNum; j++);
 		{
+			int j;
 			tx[j] = x[j + nOff];
 			ty[j] = y[j + nOff];
 		}

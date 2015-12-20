@@ -464,7 +464,7 @@ m_lpRandomScale[127]= 100;
 	for ( int i = 0; i < 25; i++ )
 		m_lpnDiffMatrix [i] = 0;
 
-	for ( i = 0; i < 512; i+=4 )
+	for (int i = 0; i < 512; i+=4 )
 	{
 		m_lpnCoefficient[i] =	pnCoefficient[i+1]+pnCoefficient[i+2]+pnCoefficient[i+3];
 		m_lpnCoefficient[i+1] =	pnCoefficient[i+1];
@@ -691,7 +691,7 @@ int CDiffusionVarCo::ImageDiffusion (LPBYTE lpImg, int nImgWidth, int nImgHeight
 	for ( int i = 0; i < w*h; i++)
 		lpImg1[i] = int(WORD(lpImg[i]));
 	int nRet = this->ImageDiffusion (lpImg1, w,h);
-	for ( i = 0; i < w*h; i++)
+	for (int i = 0; i < w*h; i++)
 		lpImg[i] = BYTE(WORD(lpImg1[i]));
 	
 	return nRet;

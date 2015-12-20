@@ -92,7 +92,7 @@ void CMeshForGeoImg::SetData(CMesh &mesh)
 		m_pPts[i].IsNull = FALSE;
 	}
 
-	for(i=0; i<m_nFaceSum; i++)
+	for(int i=0; i<m_nFaceSum; i++)
 	{
 		int va,vb,vc;
 		mesh.GetTriangleIndices(va, vb, vc, i);
@@ -159,7 +159,7 @@ void CMeshForGeoImg::SetMesh()
 		int *v2 = new int[nFaceSum];
 		int *v3 = new int[nFaceSum];
 		
-		for(i=0; i<nFaceSum; i++)
+		for(int i=0; i<nFaceSum; i++)
 		{			
 			v1[i] =	m_vecTriangleIndices[i].index[0] ;
 			v2[i] = m_vecTriangleIndices[i].index[1] ;

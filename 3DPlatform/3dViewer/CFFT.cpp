@@ -323,7 +323,7 @@ void CFFT::DFT (double* dR, double* dI, int m)
 		dI_in[i]	= dI[i];
 	}
 	
-	for ( i = 0; i < m; i++ )
+	for (int i = 0; i < m; i++ )
 		this->CalcFrequency (m, i, dR_in, dI_in, dR[i], dI[i]);
 	free(dR_in);
 	free(dI_in);
@@ -445,7 +445,7 @@ void CFFT::CopyMagnitude ()
 		lpfImage[i*m_N+j]	= fM;
 	}
 
-	for ( i = 0; i < m_M; i++ )//for each row
+	for (int i = 0; i < m_M; i++ )//for each row
 		for ( int j = 0; j < m_N; j++ )//for each element in the row
 	{
 		image[i*m_N+j]	= (unsigned __int16 )
@@ -530,7 +530,7 @@ void CFFT::CopyPeridogram ()
 	fMax = -FLT_MAX;
 	fMin = FLT_MAX;
 
-	for ( i = 0; i < m_M; i++ )//for each row
+	for (int i = 0; i < m_M; i++ )//for each row
 		for ( int j = 0; j < m_N; j++ )//for each element in the row
 	{
 		if (i==nMax_x&&j==nMax_y)

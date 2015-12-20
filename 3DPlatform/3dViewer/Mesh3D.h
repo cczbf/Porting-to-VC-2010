@@ -30,7 +30,7 @@ public:
 	bool IsHaveBoundary();
 	void DrawEdges();
 	void LoadData(CString strFileName);
-	Init();
+	int Init();
 
 	POINT3D  meshPnt(int n) const;
 

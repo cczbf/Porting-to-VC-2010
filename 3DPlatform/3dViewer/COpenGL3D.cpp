@@ -105,6 +105,7 @@ void COpenGL3D::Legend(RECT& rt)
 
 	if(m_p3D->m_bAutoCr)
 	{
+		int i;
 		for( int i=0; i<m_p3D->m_nCrLevel; i++ )
 		{
 			glColor3f(m_p3D->m_MinCr.r + i * (m_p3D->m_MaxCr.r-m_p3D->m_MinCr.r) / 
@@ -144,7 +145,7 @@ void COpenGL3D::Legend(RECT& rt)
 					  (rt.bottom - rt.top - m_nD * m_p3D->m_nCrLevel) / 2 - 1 + 
 					  m_p3D->m_yLgdOs, 0);
 		glEnd();
-		for(i=0; i<=m_p3D->m_nCrLevel; i++)
+		for(int i=0; i<=m_p3D->m_nCrLevel; i++)
 		{
 			glRasterPos2i(rt.right-rt.left + m_p3D->m_xLgdOs + 5 * m_nD / 2,
 					     (rt.bottom-rt.top - m_nD * m_p3D->m_nCrLevel) / 2 +
@@ -156,6 +157,7 @@ void COpenGL3D::Legend(RECT& rt)
 	}
 	else
 	{
+		int i;
 		for(int i=0; i<m_p3D->m_nUserCrNum; i++)
 		{
 			glColor3f(GetRValue(m_p3D->m_UserCr.GetAt(i)) / 255.f, 
@@ -192,7 +194,7 @@ void COpenGL3D::Legend(RECT& rt)
 					  (rt.bottom - rt.top - m_nD * m_p3D->m_nUserCrNum) / 2 + 
 					  m_p3D->m_yLgdOs, 0);
 		glEnd();
-		for(i=0; i<=m_p3D->m_nUserCrNum; i++)
+		for(int i=0; i<=m_p3D->m_nUserCrNum; i++)
 		{
 			glRasterPos2i(rt.right-rt.left + m_p3D->m_xLgdOs + 5 * m_nD / 2,
 						 (rt.bottom-rt.top - m_nD * m_p3D->m_nUserCrNum) / 2 +
@@ -284,7 +286,7 @@ void COpenGL3D::DrawSide()
 			glEnd();
 		}
 
-		for( i=0; i<m_p3D->nX-1; i++ )	// Y==m_fC
+		for(int i=0; i<m_p3D->nX-1; i++ )	// Y==m_fC
 		{
 			glBegin(GL_QUADS);
 			ColorLevel(-m_fC);
@@ -297,7 +299,7 @@ void COpenGL3D::DrawSide()
 			glEnd();
 		}
 		
-		for( j=0; j<m_p3D->nY-1; j++ )	//	X==-m_fC
+		for(int j=0; j<m_p3D->nY-1; j++ )	//	X==-m_fC
 		{
 			glBegin(GL_QUADS);
 			ColorLevel(-m_fC);
@@ -333,7 +335,7 @@ void COpenGL3D::DrawSide()
 			glEnd();
 		}
 
-		for( i=0; i<m_p3D->nX-1; i++ )	// Y==m_fC
+		for(int i=0; i<m_p3D->nX-1; i++ )	// Y==m_fC
 		{
 			glBegin(GL_QUADS);
 			glVertex3f(m_p3D->m_XYZ.x[i], m_fC, -m_fC);
@@ -343,7 +345,7 @@ void COpenGL3D::DrawSide()
 			glEnd();
 		}
 		
-		for( j=0; j<m_p3D->nY-1; j++ )	//	X==-m_fC
+		for(int j=0; j<m_p3D->nY-1; j++ )	//	X==-m_fC
 		{
 			glBegin(GL_QUADS);
 			glVertex3f(-m_fC, m_p3D->m_XYZ.y[j], -m_fC);
@@ -354,7 +356,7 @@ void COpenGL3D::DrawSide()
 		}
 
 		glColor3f(m_p3D->m_BackCr.r, m_p3D->m_BackCr.g, m_p3D->m_BackCr.b);
-		for( i=0; i<m_p3D->nX-1; i++ )  // Y==-m_fC
+		for(int i=0; i<m_p3D->nX-1; i++ )  // Y==-m_fC
 		{
 			glBegin(GL_LINE_LOOP);
 			glVertex3f(m_p3D->m_XYZ.x[i], -m_fC-m_fDelta, -m_fC);
@@ -364,7 +366,7 @@ void COpenGL3D::DrawSide()
 			glEnd();
 		}
 
-		for( j=0; j<m_p3D->nY-1; j++ )	//X==m_fC
+		for(int j=0; j<m_p3D->nY-1; j++ )	//X==m_fC
 		{
 			glBegin(GL_LINE_LOOP);
 			glVertex3f(m_fC+m_fDelta, m_p3D->m_XYZ.y[j], -m_fC);
@@ -374,7 +376,7 @@ void COpenGL3D::DrawSide()
 			glEnd();
 		}
 
-		for( i=0; i<m_p3D->nX-1; i++ )	// Y==m_fC
+		for(int i=0; i<m_p3D->nX-1; i++ )	// Y==m_fC
 		{
 			glBegin(GL_LINE_LOOP);
 			glVertex3f(m_p3D->m_XYZ.x[i], m_fC+m_fDelta, -m_fC);
@@ -384,7 +386,7 @@ void COpenGL3D::DrawSide()
 			glEnd();
 		}
 		
-		for( j=0; j<m_p3D->nY-1; j++ )	//	X==-m_fC
+		for(int j=0; j<m_p3D->nY-1; j++ )	//	X==-m_fC
 		{
 			glBegin(GL_LINE_LOOP);
 			glVertex3f(-m_fC-m_fDelta, m_p3D->m_XYZ.y[j], -m_fC);
@@ -646,7 +648,7 @@ void COpenGL3D::Normalisation(int type, int n)
 			if(m_DS[m].m_XYZ.x[k] > m_DS[m].m_fXmax)
 				m_DS[m].m_fXmax = m_DS[m].m_XYZ.x[k];
 		}
-		for(k=0; k<m_DS[m].nY; k++)
+		for(int k=0; k<m_DS[m].nY; k++)
 		{
 			if(m_DS[m].m_XYZ.y[k] < m_DS[m].m_fYmin)
 				m_DS[m].m_fYmin = m_DS[m].m_XYZ.y[k];
@@ -654,7 +656,7 @@ void COpenGL3D::Normalisation(int type, int n)
 				m_DS[m].m_fYmax = m_DS[m].m_XYZ.y[k];
 		}
 		int j = m_DS[m].nY*m_DS[m].nX;
-		for(k=0; k<j; k++)
+		for(int k=0; k<j; k++)
 		{
 			if(m_DS[m].m_XYZ.z[k] < m_DS[m].m_fZmin)
 				m_DS[m].m_fZmin = m_DS[m].m_XYZ.z[k];
@@ -663,7 +665,7 @@ void COpenGL3D::Normalisation(int type, int n)
 		}
 		if (type == GTRUE3D)
 		{
-			for(k=0; k<j; k++)
+			for(int k=0; k<j; k++)
 			{
 				if(m_DS[m].m_XYZ.w[k] < m_DS[m].m_fWmin)
 					m_DS[m].m_fWmin = m_DS[m].m_XYZ.w[k];
@@ -673,21 +675,21 @@ void COpenGL3D::Normalisation(int type, int n)
 		}
 	}
 
-	for(m=0; m<n; m++)
+	for(int m=0; m<n; m++)
 	{
 		for(int k=0; k<m_DS[m].nX; k++)
 			m_DS[m].m_XYZ.x[k] = ( m_DS[m].m_XYZ.x[k] - 
 				m_DS[m].m_fXmin) / (m_DS[m].m_fXmax - m_DS[m].m_fXmin) - m_fC;
-		for(k=0; k<m_DS[m].nY; k++)
+		for(int k=0; k<m_DS[m].nY; k++)
 			m_DS[m].m_XYZ.y[k] = ( m_DS[m].m_XYZ.y[k] - 
 				m_DS[m].m_fYmin) / (m_DS[m].m_fYmax - m_DS[m].m_fYmin) - m_fC;
 		int j = m_DS[m].nY * m_DS[m].nX;
-		for(k=0; k<j; k++)
+		for(int k=0; k<j; k++)
 			m_DS[m].m_XYZ.z[k] = ( m_DS[m].m_XYZ.z[k] - 
 				m_DS[m].m_fZmin) / (m_DS[m].m_fZmax - m_DS[m].m_fZmin) - m_fC;
 		if (type == GTRUE3D)
 		{
-			for(k=0; k<j; k++)
+			for(int k=0; k<j; k++)
 				m_DS[m].m_XYZ.w[k] = ( m_DS[m].m_XYZ.w[k] - 
 					m_DS[m].m_fWmin) / (m_DS[m].m_fWmax - m_DS[m].m_fWmin) - m_fC;
 		}
@@ -736,15 +738,15 @@ void COpenGL3D::LoadSurferBinaryData(FILE* fp)
 		}
 	}
 
-	for(k=0; k<col; k++)
+	for(int k=0; k<col; k++)
 		m_DS[0].m_XYZ.x[k] = 1.0f * k / (col - 1) - m_fC;
 
-	for(k=0; k<row; k++)
+	for(int k=0; k<row; k++)
 		m_DS[0].m_XYZ.y[k] = 1.0f * k / (row - 1) - m_fC;
 
 
 	n = row * col;
-	for(k=0; k<n; k++)
+	for(int k=0; k<n; k++)
 			m_DS[0].m_XYZ.z[k] = (m_DS[0].m_XYZ.z[k] - m_DS[0].m_fZmin) / 
 								 (m_DS[0].m_fZmax - m_DS[0].m_fZmin) - m_fC;
 }
@@ -754,6 +756,7 @@ void COpenGL3D::LoadSurferTextData(FILE* fp)
 	char ch[100];
 	int n;
 	int col, row;
+	int k;
 
 	fseek(fp, 0, SEEK_SET);
 	fgets(ch, 100, fp);
@@ -819,6 +822,7 @@ void COpenGL3D::Load3DMultipleMapsData(FILE* fp, char type)
 {
 	char ch[32];
 	int m, n, col, row;
+	int k;
 
 	fread(&n, sizeof(int), 1, fp); // n: number of maps
 
@@ -1005,7 +1009,7 @@ void COpenGL3D::OpenMaps(unsigned int hHandle)
 		/////////Marker structure
 		::ReadFile(handle, &n, sizeof(int), &len, NULL);
 		m_DS[k].m_Marker.SetSize(n);
-		for(i=0; i<n; i++)
+		for(int i=0; i<n; i++)
 		{
 			::ReadFile(handle, &m_DS[k].m_Marker[i].x, sizeof(float), &len, NULL);
 			::ReadFile(handle, &m_DS[k].m_Marker[i].y, sizeof(float), &len, NULL);
@@ -1107,7 +1111,7 @@ void COpenGL3D::SaveMaps(unsigned int hHandle)
 		/////////Marker structure
 		n = m_DS[k].m_Marker.GetSize();
 		::WriteFile(handle, &n, sizeof(int), &len, NULL);
-		for(i=0; i<n; i++)
+		for(int i=0; i<n; i++)
 		{
 			::WriteFile(handle, &m_DS[k].m_Marker[i].x, sizeof(float), &len, NULL);
 			::WriteFile(handle, &m_DS[k].m_Marker[i].y, sizeof(float), &len, NULL);

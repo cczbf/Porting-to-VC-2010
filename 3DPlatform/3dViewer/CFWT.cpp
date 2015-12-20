@@ -221,7 +221,7 @@ void CFWT::FWT2D ()
 	for ( int i = 0; i <= m*n; i++)
 		zr[i] = (float)0.0;
 	/* copy image to zr array */ 
-	for ( i = 0; i < m_M; i++ )//for each row (m_M, m  are Heights)
+	for (int i = 0; i < m_M; i++ )//for each row (m_M, m  are Heights)
 		for ( int j = 0; j < m_N; j++ )//for each element in the row (m_N, n are Widths)
 	{
 		zr[i*n+j+1]	= image[i*m_N+j];
@@ -303,7 +303,7 @@ void CFWT::CopyWT (BOOL bInDecibel)
 	}
 
 	if (!bInDecibel)
-		for ( i = 0; i < m_M; i++ )//for each row
+		for (int i = 0; i < m_M; i++ )//for each row
 			for ( int j = 0; j < m_N; j++ )//for each element in the row
 		{
 			image[i*m_N+j]	= (unsigned __int16 )
@@ -312,7 +312,7 @@ void CFWT::CopyWT (BOOL bInDecibel)
 	else
 	{
 		double a;
-		for ( i = 0; i < m_M; i++ )//for each row
+		for (int i = 0; i < m_M; i++ )//for each row
 			for ( int j = 0; j < m_N; j++ )//for each element in the row
 		{
 

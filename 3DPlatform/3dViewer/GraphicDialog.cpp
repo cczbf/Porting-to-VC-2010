@@ -119,7 +119,7 @@ void CGraphicDialog::OnMap1()
 
 	double dM = dCount ;
 	dCount = 0 ;
-	for(i = 0 ; i < 256 ; i ++)
+	for(int i = 0 ; i < 256 ; i ++)
 	{
 		m_nShowAry1[i] ;
 		dCount = dCount + (double)(m_nShowAry1[i] * (i-dM)*(i-dM)) ;

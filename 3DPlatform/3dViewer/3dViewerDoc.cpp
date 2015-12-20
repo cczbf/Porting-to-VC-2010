@@ -706,7 +706,7 @@ void CMy3dViewerDoc::OnChangeMeshColor()
 	double *y = new double[nVertexNum];
 	double *z = new double[nVertexNum];
 
-	for ( i=0; i<nVertexNum; i++)
+	for (int i=0; i<nVertexNum; i++)
 	{
 		x[i] =  ((COpenGL3DEx *)m_pCOpenGL)->m_pCMesh->m_CVertexArray[i].dX;
 		y[i] =  ((COpenGL3DEx *)m_pCOpenGL)->m_pCMesh->m_CVertexArray[i].dY;
@@ -835,7 +835,7 @@ void CMy3dViewerDoc::OutputGeoimageIntoImgBuffer()
 					fMax = b;
 			}	
 			
-			for(i=0; i<nHei; i++)
+			for(int i=0; i<nHei; i++)
 				for(int j=0; j<nWid; j++)
 				{
 					float r,g,b;
@@ -853,7 +853,7 @@ void CMy3dViewerDoc::OutputGeoimageIntoImgBuffer()
 			int nScale = 5;
 			BYTE *pInterpolateGeoimage = new BYTE[nWid*nHei*nScale*nScale*3];
             
-			for(i=0; i<(nHei)*nScale  ; i++)
+			for(int i=0; i<(nHei)*nScale  ; i++)
 				for(int j=0; j<(nWid)*nScale ; j++)
 				{
 		
@@ -1226,7 +1226,7 @@ void CMy3dViewerDoc::OnModelExtrude()
 		}
         double *x = new double[xColl.size()];
 		double *y = new double[xColl.size()];
-		for(i=0; i<xColl.size(); i++)
+		for(int i=0; i<xColl.size(); i++)
 		{
 			x[i] = xColl[i];
 			y[i] = yColl[i];

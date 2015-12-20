@@ -298,7 +298,7 @@ float ComputeStretchRatio(float d3l, float d2l)
 {
 	float ratio = 0;
 		
-	float fE = (float)exp(1);
+	float fE = (float)exp(double(1));
 	float lfx = (float)fabs(d3l - d2l);
 
 	ratio = float(( fE - pow(fE, (1/(lfx+1))) )/(fE-1));

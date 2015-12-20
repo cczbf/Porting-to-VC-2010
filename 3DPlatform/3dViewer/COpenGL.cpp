@@ -374,7 +374,7 @@ bool COpenGL::LoadMarkerData (const char* FileName)
 	}
 	fclose(fp);
 
-	for(j=0; j<i; j++)
+	for(int j=0; j<i; j++)
 	{
 		m_pDS->m_Marker[j].x = (m_pDS->m_Marker[j].x - m_pDS->m_fXmin) / 
 							   (m_pDS->m_fXmax - m_pDS->m_fXmin) - m_fC;

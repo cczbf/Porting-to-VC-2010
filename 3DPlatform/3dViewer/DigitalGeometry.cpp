@@ -113,7 +113,7 @@ CMesh* SubdivisionMesh(const CMesh &mesh)
 	double *x = new double[nVertexSize];
 	double *y = new double[nVertexSize];
 	double *z = new double[nVertexSize];
-	for(i=0; i<mesh.GetVertexNum(); i++)
+	for(int i=0; i<mesh.GetVertexNum(); i++)
 	{
 		float fx, fy, fz;
 		mesh.GetVertex(fx, fy, fz, i);
@@ -122,7 +122,7 @@ CMesh* SubdivisionMesh(const CMesh &mesh)
 		z[i] = (double)fz * 10;
 	}
     
-	for(i=0; i<mptColl.size(); i++)
+	for(int i=0; i<mptColl.size(); i++)
 	{
 		int indexA = mptColl[i].GetA();
 		int indexB = mptColl[i].GetB();
@@ -139,7 +139,7 @@ CMesh* SubdivisionMesh(const CMesh &mesh)
 	int *va = new int[trianglesColl.size()];
 	int *vb = new int[trianglesColl.size()];
 	int *vc = new int[trianglesColl.size()];
-	for(i=0; i<trianglesColl.size(); i++)
+	for(int i=0; i<trianglesColl.size(); i++)
 	{
 	   int v1,v2,v3;
 	   v1 = trianglesColl[i].v1;

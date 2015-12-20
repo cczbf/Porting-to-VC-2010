@@ -155,12 +155,12 @@ void COpenGL3DEx::LoadSurferRAWData (HANDLE hRaw, int col, int row)
 	for(int k=0; k<col; k++)
 		m_DS[0].m_XYZ.x[k] = 1.0f * k / (col - 1) - m_fC;
 
-	for(k=0; k<row; k++)
+	for(int k=0; k<row; k++)
 		m_DS[0].m_XYZ.y[k] = 1.0f * k / (row - 1) - m_fC;
 
 
 	n = row * col;
-	for(k=0; k<n; k++)
+	for(int k=0; k<n; k++)
 			m_DS[0].m_XYZ.z[k] = (m_DS[0].m_XYZ.z[k] - m_DS[0].m_fZmin) / 
 								 (m_DS[0].m_fZmax - m_DS[0].m_fZmin) - m_fC;
 }
@@ -1035,7 +1035,7 @@ void COpenGL3DEx::DrawArc(float a1, float a2, float a3,
 
 	//draw the arc
 	//because the original data is normalized to 0.5, so we multiply 0.5
-	for ( i=0; i<(m+1); i++ )
+	for (int i=0; i<(m+1); i++ )
 	{
 		glBegin(GL_LINES);
 			glVertex3f((GLfloat)points[i].x * (float)0.5, (GLfloat)points[i].y * (float)0.5, (GLfloat)points[i].z * (float)0.5);

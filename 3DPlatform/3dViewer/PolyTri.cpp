@@ -155,7 +155,7 @@ void CPolyTri::Init(char *fileName)
 
 	m_pX = new double[xColl.size()];
 	m_pY = new double[xColl.size()];
-	for(i=0; i<xColl.size(); i++)
+	for(int i=0; i<xColl.size(); i++)
 	{
 		m_pX[i] = xColl[i];
 		m_pY[i] = yColl[i];
